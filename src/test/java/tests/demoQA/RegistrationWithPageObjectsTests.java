@@ -49,5 +49,6 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                         .verifyResult("Address", currentAddress)
                         .verifyResult("State and City", state + " " + city)
                         .displayedCloseButton();
+
     }
 }
