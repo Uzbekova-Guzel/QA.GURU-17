@@ -38,17 +38,17 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
         //Проверка диалога успешного заполнения Thanks for submitting the form
         registrationPage.verifyResultsModalAppears()
-                        .verifyResult("Student Name", firstName + " " + lastName)
-                        .verifyResult("Student Email", email)
-                        .verifyResult("Gender", gender)
-                        .verifyResult("Mobile", phoneNumber)
-                        .verifyResult("Date of Birth", dateOfBirth)
-                        .verifyResult("Subjects", subject)
-                        .verifyResult("Hobbies", hobbies)
-                        .verifyResult("Picture", picture)
-                        .verifyResult("Address", currentAddress)
-                        .verifyResult("State and City", state + " " + city)
-                        .displayedCloseButton();
+                 .verifyResult("Student Name", firstName + " " + lastName)
+                 .verifyResult("Student Email", email)
+                 .verifyResult("Gender", gender)
+                 .verifyResult("Mobile", phoneNumber)
+                 .verifyResult("Date of Birth", dateOfBirth)
+                 .verifyResult("Subjects", subject)
+                 .verifyResult("Hobbies", hobbies)
+                 .verifyResult("Picture", picture)
+                 .verifyResult("Address", currentAddress)
+                 .verifyResult("State and City", state + " " + city)
+                 .displayedCloseButton();
 
     }
 }
