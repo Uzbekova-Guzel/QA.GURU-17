@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class SelenideSoftAssertions {
+public class SelenideSoftAssertionsTest {
 
     @Test
     void shouldFindSoftAssertions() {
