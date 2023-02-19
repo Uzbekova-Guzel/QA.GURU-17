@@ -6,7 +6,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.opencsv.CSVReader;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.io.Zip;
 import tests.selenidefiles.model.Glossary;
 
 import java.io.File;

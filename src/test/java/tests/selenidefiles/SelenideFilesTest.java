@@ -1,8 +1,6 @@
 package tests.selenidefiles;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.FileDownloadMode;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
