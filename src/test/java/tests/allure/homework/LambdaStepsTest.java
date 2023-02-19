@@ -31,18 +31,18 @@ public class LambdaStepsTest {
         step("Открываем главную страницу", () -> {
             open("https://github.com/");
         });
-        step("Ищем репозиторий" + REPOSITORY, () -> {
+        step("Ищем репозиторий " + REPOSITORY, () -> {
             $(".header-search-input").click();
             $(".header-search-input").sendKeys(REPOSITORY);
             $(".header-search-input").submit();
         });
-        step("Кликаем по ссылке репозитория" + REPOSITORY, () -> {
+        step("Кликаем по ссылке репозитория " + REPOSITORY, () -> {
             $(linkText(REPOSITORY)).click();
         });
         step("Открываем таб Issues", () -> {
             $("#issues-tab").click();
         });
-        step("Проверяем наличие Issue с наименованием" + ISSUE, () -> {
+        step("Проверяем наличие Issue с наименованием " + ISSUE, () -> {
             $(withText(ISSUE)).should(Condition.exist);
         });
     }
