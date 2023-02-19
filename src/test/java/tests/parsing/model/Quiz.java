@@ -1,10 +1,7 @@
 package tests.parsing.model;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Quiz {
     public String quiz;
-    @SerializedName("questions")
     public Questions questions;
 
     public static class Questions {
