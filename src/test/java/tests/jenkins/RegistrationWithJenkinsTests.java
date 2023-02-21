@@ -52,7 +52,6 @@ public class RegistrationWithJenkinsTests extends TestBaseExtended {
                     .selectCity(city)
                     .clickSubmitButton();
                 });
-
         step("Проверяется успешное заполнение диалога 'Thanks for submitting the form'", () -> {
             registrationPage.verifyResultsModalAppears()
                     .verifyResult("Student Name", firstName + " " + lastName)
