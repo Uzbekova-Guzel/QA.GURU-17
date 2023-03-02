@@ -24,6 +24,11 @@ repositories {
     mavenCentral()
 }
 
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     testImplementation(
             'com.codeborne:selenide:6.10.3',
@@ -40,9 +45,16 @@ dependencies {
     )
 }
 
-test {
-    useJUnitPlatform()
+tasks.withType(Test) {
     systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
 
 task simple_test(type: Test) {
@@ -54,5 +66,24 @@ task simple_test(type: Test) {
 task remote_test(type: Test) {
     useJUnitPlatform{
         includeTags("remote")
+    }
+}
+
+task one_property_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("one_property")
+    }
+}
+
+task hello_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("hello")
+    }
+}
+
+task two_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("hello")
+        includeTags("one_property")
     }
 }
