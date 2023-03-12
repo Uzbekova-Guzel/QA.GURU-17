@@ -1,0 +1,22 @@
+{
+  "base": {
+    "logo": "",
+    "project": "017_Guzel_Uz_JenkinsLesson13_notifications",
+    "environment": "qa.guru",
+    "comment": "any comment here, @Guzel_Uz",
+    "reportLink": "https://jenkins.autotests.cloud",
+    "language": "ru",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6204767471:AAEDQP1SLvg3QzxjZxc1wo8jiapY7_teEdA",
+    "chat": "-1001584994129",
+    "replyTo": ""
+  },
+  "slack": {
+    "token": "xoxb-4931303194996-4928737257123-kAIbzb94QCSlRWTH9Mq6VKX1",
+    "chat": "#qaguru",
+    "replyTo": ""
+  }
+}
