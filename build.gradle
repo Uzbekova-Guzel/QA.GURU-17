@@ -41,7 +41,8 @@ dependencies {
             'com.google.code.gson:gson:2.10.1',
             'com.fasterxml.jackson.core:jackson-databind:2.14.1',
             'com.github.javafaker:javafaker:1.0.2',
-            'io.qameta.allure:allure-selenide:2.19.0'
+            'io.qameta.allure:allure-selenide:2.19.0',
+            'org.aeonbits.owner:owner:1.0.12'
     )
 }
 
@@ -69,6 +70,12 @@ task remote_test(type: Test) {
     }
 }
 
+task owner_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("owner")
+    }
+}
+
 task one_property_test(type: Test) {
     useJUnitPlatform{
         includeTags("one_property")
@@ -87,3 +94,5 @@ task two_test(type: Test) {
         includeTags("one_property")
     }
 }
+
+//./gradlew clean owner -DbaseUrl=https://github.com -Dbrowser=CHROME
